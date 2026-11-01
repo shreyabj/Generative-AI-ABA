@@ -15,7 +15,7 @@
 [![Guardrails](https://img.shields.io/badge/guardrails-7_gates-FF6B6B?style=flat-square&labelColor=06070A)](docs/GUARDRAILS.md)
 [![License](https://img.shields.io/badge/license-MIT-9BA3B4?style=flat-square&labelColor=06070A)](LICENSE)
 
-**HH Goa 2026 · Shortlisting Task 2 · `#RAGInGoa`**
+
 
 </div>
 
@@ -632,6 +632,6 @@ Licensed MIT (see [LICENSE](LICENSE) for third-party data terms).
 
 <div align="center">
 
-**#RAGInGoa**
+
 
 </div>
