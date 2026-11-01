@@ -1,0 +1,36 @@
+# Keep the build context small - the data directory and model caches are the
+# difference between a 30 MB context and a multi-gigabyte one.
+
+.git
+.github
+.venv
+venv
+__pycache__
+*.py[cod]
+*.egg-info
+.pytest_cache
+.ruff_cache
+.mypy_cache
+
+node_modules
+web/dist
+web/node_modules
+.vite
+
+# Derived data. The image builds its own sample index at build time, and a larger
+# ingest belongs on a mounted volume, not baked into the layer.
+data/index
+data/corpus
+data/qdrant
+.cache
+
+.env
+.env.local
+*.log
+_*.py
+_*.log
+
+.DS_Store
+Thumbs.db
+.idea
+.vscode

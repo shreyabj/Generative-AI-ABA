@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "setu-voice-rag"
+version = "1.0.0"
+description = "SETU - Speech to Evidence to Truth to Utterance. A sub-200ms multilingual voice RAG engine over MS MARCO-XI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "SETU Team" }]
+keywords = ["rag", "voice", "speech-to-text", "vector-database", "guardrails", "low-latency"]
+
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "python-multipart>=0.0.9",
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "orjson>=3.10",
+  "httpx>=0.27",
+  "fastembed>=0.4",
+  "qdrant-client>=1.9",
+  # SETU 2.0: metadata DB + document ingestion
+  "sqlalchemy>=2.0",
+  "pypdf>=4.2",
+  "python-docx>=1.1",
+  "trafilatura>=1.12",
+]
+
+[project.optional-dependencies]
+ingest = ["pyarrow>=15", "pandas>=2.0", "huggingface_hub>=0.23"]
+dev = ["pytest>=8", "pytest-asyncio>=0.24", "ruff>=0.5"]
+
+[project.scripts]
+setu = "setu.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["server"]
+include = ["setu*"]
+
+[tool.ruff]
+line-length = 108
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501", "B008"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

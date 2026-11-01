@@ -1,0 +1,53 @@
+# ---- python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ---- env / secrets
+.env
+.env.local
+*.pem
+
+# ---- node
+node_modules/
+web/dist/
+.vite/
+*.tsbuildinfo
+
+# ---- SETU artifacts
+# The built index and the ingested corpus are derived data - regenerate with
+# `make ingest` or `make build`. The sample corpus IS committed.
+data/index/
+data/corpus/
+data/qdrant/
+.cache/
+
+# Generated measurement reports. Commit them when they back a claim in the README.
+# docs/latency.json
+# docs/quality.json
+# docs/redteam.json
+# docs/ablation.json
+
+# ---- os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# ---- scratch
+_*.py
+!scripts/_common.py
+!**/__init__.py
+data/setu.db*
+data/collections/
+data/redteam_v2.json
+_*.log
+*.tmp

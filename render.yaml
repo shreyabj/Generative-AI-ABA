@@ -1,0 +1,34 @@
+# Render blueprint. Push to GitHub, then New -> Blueprint -> pick this repo.
+#
+# The Docker image bakes the encoder weights and builds the sample index at build
+# time, so the first request after a deploy is served from a warm process rather
+# than triggering a 120 MB model download.
+#
+# The disk persists /app/data, so `setu ingest` run once in the shell survives
+# restarts and you are not limited to the sample corpus.
+
+services:
+  - type: web
+    name: setu
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter # 512 MB is enough for the sample index; use standard for a full ingest
+    healthCheckPath: /api/v1/health
+    autoDeploy: true
+    envVars:
+      - key: ELEVENLABS_API_KEY
+        sync: false # set in the dashboard; enables voice in and voice out
+      - key: GROQ_API_KEY
+        sync: false # optional; enables the deliberate path
+      - key: SETU_VECTOR_BACKEND
+        value: flat
+      - key: SETU_LOG_LEVEL
+        value: info
+      - key: OMP_NUM_THREADS
+        value: "2"
+      - key: HF_HOME
+        value: /app/.cache/huggingface
+    disk:
+      name: setu-data
+      mountPath: /app/data
+      sizeGB: 5

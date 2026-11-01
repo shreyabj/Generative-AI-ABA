@@ -1,0 +1,53 @@
+# SETU local stack.
+#
+#   docker compose up --build            app only, in-process exact vector store
+#   docker compose --profile qdrant up   app + Qdrant as the vector database
+#
+# The default profile deliberately runs without Qdrant: at lattice scale an exact
+# matmul is faster than an HNSW round trip over localhost and has no recall loss
+# (see docs/LATENCY.md §2). The Qdrant profile exists because that stops being
+# true at millions of vectors, and switching is one env var.
+
+services:
+  setu:
+    build: .
+    container_name: setu
+    ports:
+      - "8000:8000"
+    environment:
+      # Copy .env.example to .env and fill these in.
+      ELEVENLABS_API_KEY: ${ELEVENLABS_API_KEY:-}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      SETU_VECTOR_BACKEND: ${SETU_VECTOR_BACKEND:-flat}
+      SETU_QDRANT_URL: ${SETU_QDRANT_URL:-}
+      SETU_API_TOKEN: ${SETU_API_TOKEN:-}
+      SETU_CORS_ORIGINS: ${SETU_CORS_ORIGINS:-*}
+      SETU_LOG_LEVEL: info
+    volumes:
+      # Persist the ingested corpus, the built index, the SETU 2.0 metadata DB
+      # (setu.db), every collection index (collections/) and the model cache.
+      - setu-data:/app/data
+      - setu-cache:/app/.cache
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/api/v1/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 90s
+      retries: 3
+
+  qdrant:
+    image: qdrant/qdrant:v1.12.4
+    container_name: setu-qdrant
+    profiles: ["qdrant"]
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant-data:/qdrant/storage
+    restart: unless-stopped
+
+volumes:
+  setu-data:
+  setu-cache:
+  qdrant-data:

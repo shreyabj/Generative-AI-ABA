@@ -1,0 +1,53 @@
+# Fly.io deployment.
+#
+#   fly launch --no-deploy --copy-config
+#   fly volumes create setu_data --size 5
+#   fly secrets set ELEVENLABS_API_KEY=... GROQ_API_KEY=...
+#   fly deploy
+#
+# auto_stop_machines is deliberately off. SETU warms the ONNX encoder and the
+# safety centroids at startup so the first user query does not pay for it; a
+# machine that suspends between requests would hand that cost back on every
+# cold wake and make the latency story a lie.
+
+app = "setu-voice-rag"
+primary_region = "sin" # Singapore - closest Fly region to India
+
+[build]
+dockerfile = "Dockerfile"
+
+[env]
+SETU_HOST = "0.0.0.0"
+SETU_PORT = "8000"
+SETU_VECTOR_BACKEND = "flat"
+SETU_LOG_LEVEL = "info"
+OMP_NUM_THREADS = "2"
+HF_HOME = "/app/.cache/huggingface"
+
+[http_service]
+internal_port = 8000
+force_https = true
+auto_stop_machines = false
+auto_start_machines = true
+min_machines_running = 1
+processes = ["app"]
+
+[http_service.concurrency]
+type = "requests"
+soft_limit = 40
+hard_limit = 80
+
+[[http_service.checks]]
+interval = "30s"
+timeout = "5s"
+grace_period = "90s"
+method = "GET"
+path = "/api/v1/health"
+
+[[mounts]]
+source = "setu_data"
+destination = "/app/data"
+
+[[vm]]
+size = "shared-cpu-2x"
+memory = "2gb"
