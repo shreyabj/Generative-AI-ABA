@@ -1,0 +1,23 @@
+{
+  "collection": "India Business & Economy 2026",
+  "description": "Curated public sources: World Bank India updates, MoSPI GDP estimates, an RBI policy summary (via PIB), and quarterly results press releases from Indian IT companies. Fetched at seed time through SETU's SSRF-safe, robots.txt-respecting importer; the files themselves are not redistributed in this repository.",
+  "verified_on": "2026-11-01",
+  "excluded": [
+    {"url": "https://www.infosys.com/investors/reports-filings/quarterly-results/2025-2026/q2/documents/ifrs-usd-press-release.pdf", "reason": "robots.txt disallows automated fetching"},
+    {"url": "https://www.tcs.com/who-we-are/newsroom/press-release/tcs-financial-results-q2-fy-2027", "reason": "robots.txt disallows automated fetching"},
+    {"url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2220800", "reason": "robots.txt disallows automated fetching"},
+    {"url": "https://imf.org/en/publications/weo/issues/2025/10/14/world-economic-outlook-october-2025", "reason": "HTTP 403 to automated clients"}
+  ],
+  "sources": [
+    {"key": "wb-idu-oct-2026", "url": "https://www.worldbank.org/en/news/press-release/2026/10/06/india-development-update-oct-2026", "publisher": "World Bank", "kind": "press release", "licence": "World Bank content is generally licensed CC BY 4.0 unless stated otherwise; attribution: The World Bank."},
+    {"key": "wb-apr-2026", "url": "https://www.worldbank.org/en/news/press-release/2026/04/09/india-remains-among-the-fastest-growing-economies", "publisher": "World Bank", "kind": "press release", "licence": "World Bank content is generally licensed CC BY 4.0 unless stated otherwise; attribution: The World Bank."},
+    {"key": "wb-idu-apr-2026-summary", "url": "https://thedocs.worldbank.org/en/doc/bc420dc95d716bc0ab8d956efd0b873c-0310012026/", "publisher": "World Bank", "kind": "report summary", "licence": "World Bank content is generally licensed CC BY 4.0 unless stated otherwise; attribution: The World Bank."},
+    {"key": "wb-high-income-2025", "url": "https://www.worldbank.org/en/news/press-release/2025/02/28/india-accelerated-reforms-needed-to-speed-up-growth-and-achieve-high-income-status-by-2047", "publisher": "World Bank", "kind": "press release", "licence": "World Bank content is generally licensed CC BY 4.0 unless stated otherwise; attribution: The World Bank."},
+    {"key": "mospi-gdp-q1-fy27", "url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1788172583113_d65a77cf-240e-4491-82ee-59f78618fa41_Press_Note_on_GDP_Estimates_for_Q1_2026-27.pdf", "publisher": "Ministry of Statistics and Programme Implementation (MoSPI), Government of India", "kind": "official statistics", "licence": "Government of India publication, reproduced for research with attribution to MoSPI."},
+    {"key": "pib-rbi-policy-oct-2025", "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/oct/doc2025101654901.pdf", "publisher": "Press Information Bureau, Government of India (summary of RBI monetary policy)", "kind": "policy summary", "licence": "Government of India publication, reproduced for research with attribution to PIB / RBI."},
+    {"key": "wipro-q2-fy27", "url": "https://www.wipro.com/newsroom/press-releases/2026/wipro-announces-results-for-the-quarter-ended-september-30-2026/", "publisher": "Wipro Limited", "kind": "company results press release", "licence": "Copyright Wipro Limited. Fetched from the company's public newsroom for research; not redistributed."},
+    {"key": "wipro-q4-fy26", "url": "https://www.wipro.com/content/dam/nexus/en/investor/corporate-governance/stock-exchange-filing/wipro-announces-results-for-the-quarter-and-year-ended-march-31-2026-16-apr-2026.pdf", "publisher": "Wipro Limited", "kind": "company results filing", "licence": "Copyright Wipro Limited. Public stock-exchange filing fetched for research; not redistributed."},
+    {"key": "techm-q2-fy27", "url": "https://www.techmahindra.com/insights/press-releases/techmahindra-q2-fy27-results/", "publisher": "Tech Mahindra Limited", "kind": "company results press release", "licence": "Copyright Tech Mahindra Limited. Fetched from the company's public press-release page for research; not redistributed."},
+    {"key": "hcltech-q2-fy27", "url": "https://www.hcltech.com/en-us/press-releases/hcltech-delivers-strong-q2-led-record-deal-bookings-33-billion", "publisher": "HCL Technologies Limited", "kind": "company results press release", "licence": "Copyright HCL Technologies Limited. Fetched from the company's public press-release page for research; not redistributed."}
+  ]
+}
