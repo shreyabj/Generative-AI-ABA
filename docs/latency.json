@@ -1,0 +1,928 @@
+{
+  "generated_at": "2026-08-17T20:12:01+00:00",
+  "methodology": {
+    "distinct_queries": true,
+    "warmup_discarded": 15,
+    "speculative_prefetch": false,
+    "p100": "true maximum",
+    "slo_ms": 200.0,
+    "mode": "reflex",
+    "pace_ms": 40.0,
+    "arrival": "paced"
+  },
+  "environment": {
+    "system": "Windows",
+    "machine": "AMD64",
+    "python": "3.12.7",
+    "cold_start_s": 2.48,
+    "warm_ms": 1783.95
+  },
+  "index": {
+    "setu_version": "1.0.0",
+    "embed_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embed_backend": "fastembed-onnx",
+    "dim": 384,
+    "n_docs": 2361,
+    "n_chunks": 10841,
+    "n_sentences": 8058,
+    "per_layer": {
+      "atomic": 5601,
+      "semantic": 2242,
+      "window": 637,
+      "document": 2361
+    },
+    "per_lang": {
+      "kn": 238,
+      "ml": 238,
+      "ta": 237,
+      "te": 237,
+      "en": 236,
+      "hi": 236,
+      "pa": 236,
+      "bn": 235,
+      "gu": 235,
+      "mr": 233
+    },
+    "chunking": {
+      "atomic_min_chars": 45,
+      "atomic_max_chars": 240,
+      "semantic_max_chars": 420,
+      "semantic_z": 0.45,
+      "window_chars": 300,
+      "window_overlap": [
+        0.14,
+        0.5
+      ],
+      "metadata_prefix": true
+    }
+  },
+  "samples": 285,
+  "pipeline_ms": {
+    "p50": 14.769,
+    "p70": 15.507,
+    "p90": 17.469,
+    "p95": 18.594,
+    "p99": 21.711,
+    "p100": 23.729,
+    "mean": 14.465,
+    "min": 7.354,
+    "stdev": 2.841
+  },
+  "wall_ms": {
+    "p50": 14.945,
+    "p70": 15.676,
+    "p90": 17.678,
+    "p95": 18.802,
+    "p99": 21.921,
+    "p100": 23.891
+  },
+  "slo_breaches": 0,
+  "slo_compliance": 1.0,
+  "stages": {
+    "tool.retrieve": {
+      "p50": 6.99,
+      "p95": 13.07,
+      "p100": 18.582
+    },
+    "tool.embed_query": {
+      "p50": 6.858,
+      "p95": 9.298,
+      "p100": 15.161
+    },
+    "retrieve.dense": {
+      "p50": 5.911,
+      "p95": 9.967,
+      "p100": 15.747
+    },
+    "rerank.late-interaction": {
+      "p50": 0.383,
+      "p95": 0.91,
+      "p100": 1.896
+    },
+    "tool.answer_reflex": {
+      "p50": 0.31,
+      "p95": 0.548,
+      "p100": 1.488
+    },
+    "fuse": {
+      "p50": 0.269,
+      "p95": 0.848,
+      "p100": 3.339
+    },
+    "tool.guard": {
+      "p50": 0.215,
+      "p95": 0.476,
+      "p100": 1.399
+    },
+    "retrieve.sparse": {
+      "p50": 0.184,
+      "p95": 0.332,
+      "p100": 0.678
+    },
+    "tool.route_query": {
+      "p50": 0.099,
+      "p95": 0.166,
+      "p100": 0.433
+    },
+    "tool.normalize_query": {
+      "p50": 0.081,
+      "p95": 0.139,
+      "p100": 1.071
+    },
+    "expand.parents": {
+      "p50": 0.025,
+      "p95": 0.069,
+      "p100": 0.249
+    },
+    "diversify": {
+      "p50": 0.021,
+      "p95": 0.046,
+      "p100": 0.111
+    }
+  },
+  "status_counts": {
+    "answered": 158,
+    "abstained": 127
+  },
+  "shape_counts": {
+    "description": 176,
+    "unknown": 27,
+    "numeric": 21,
+    "definition": 28,
+    "factoid": 16,
+    "list": 17
+  },
+  "histogram": [
+    {
+      "lo": 0,
+      "hi": 10,
+      "count": 31
+    },
+    {
+      "lo": 10,
+      "hi": 20,
+      "count": 247
+    },
+    {
+      "lo": 20,
+      "hi": 30,
+      "count": 7
+    },
+    {
+      "lo": 30,
+      "hi": 40,
+      "count": 0
+    },
+    {
+      "lo": 40,
+      "hi": 50,
+      "count": 0
+    },
+    {
+      "lo": 50,
+      "hi": 65,
+      "count": 0
+    },
+    {
+      "lo": 65,
+      "hi": 80,
+      "count": 0
+    },
+    {
+      "lo": 80,
+      "hi": 100,
+      "count": 0
+    },
+    {
+      "lo": 100,
+      "hi": 125,
+      "count": 0
+    },
+    {
+      "lo": 125,
+      "hi": 150,
+      "count": 0
+    },
+    {
+      "lo": 150,
+      "hi": 175,
+      "count": 0
+    },
+    {
+      "lo": 175,
+      "hi": 200,
+      "count": 0
+    },
+    {
+      "lo": 200,
+      "hi": 250,
+      "count": 0
+    },
+    {
+      "lo": 250,
+      "hi": 400,
+      "count": 0
+    },
+    {
+      "lo": 400,
+      "hi": null,
+      "count": 0
+    }
+  ],
+  "live_metrics": {
+    "samples": 300,
+    "total_turns": 300,
+    "window": 4096,
+    "slo_ms": 200.0,
+    "slo_compliance": 1.0,
+    "slo_breaches": 0,
+    "degraded_turns": 0,
+    "pipeline_ms": {
+      "p50": 14.772,
+      "p70": 15.527,
+      "p90": 17.4,
+      "p95": 18.413,
+      "p99": 21.668,
+      "p100": 23.729,
+      "mean": 14.507,
+      "min": 7.354,
+      "stdev": 2.791
+    },
+    "stt_ms": null,
+    "e2e_ms": {
+      "p50": 14.842,
+      "p70": 15.588,
+      "p90": 17.469,
+      "p95": 18.497,
+      "p99": 21.764,
+      "p100": 23.799,
+      "mean": 14.593
+    },
+    "stages": {
+      "diversify": {
+        "samples": 300,
+        "mean": 0.025,
+        "p50": 0.021,
+        "p95": 0.045,
+        "p100": 0.111
+      },
+      "expand.parents": {
+        "samples": 37,
+        "mean": 0.036,
+        "p50": 0.025,
+        "p95": 0.069,
+        "p100": 0.249
+      },
+      "fuse": {
+        "samples": 300,
+        "mean": 0.361,
+        "p50": 0.268,
+        "p95": 0.831,
+        "p100": 3.339
+      },
+      "rerank.late-interaction": {
+        "samples": 300,
+        "mean": 0.444,
+        "p50": 0.39,
+        "p95": 0.91,
+        "p100": 1.896
+      },
+      "retrieve.dense": {
+        "samples": 300,
+        "mean": 6.517,
+        "p50": 5.894,
+        "p95": 9.804,
+        "p100": 15.747
+      },
+      "retrieve.sparse": {
+        "samples": 300,
+        "mean": 0.201,
+        "p50": 0.189,
+        "p95": 0.332,
+        "p100": 0.678
+      },
+      "tool.answer_reflex": {
+        "samples": 170,
+        "mean": 0.331,
+        "p50": 0.315,
+        "p95": 0.542,
+        "p100": 1.488
+      },
+      "tool.embed_query": {
+        "samples": 300,
+        "mean": 5.67,
+        "p50": 6.867,
+        "p95": 9.24,
+        "p100": 15.161
+      },
+      "tool.guard": {
+        "samples": 300,
+        "mean": 0.563,
+        "p50": 0.554,
+        "p95": 0.949,
+        "p100": 2.055
+      },
+      "tool.normalize_query": {
+        "samples": 300,
+        "mean": 0.093,
+        "p50": 0.081,
+        "p95": 0.137,
+        "p100": 1.071
+      },
+      "tool.retrieve": {
+        "samples": 300,
+        "mean": 7.739,
+        "p50": 6.966,
+        "p95": 12.895,
+        "p100": 18.582
+      },
+      "tool.route_query": {
+        "samples": 300,
+        "mean": 0.108,
+        "p50": 0.099,
+        "p95": 0.164,
+        "p100": 0.433
+      }
+    },
+    "status_counts": {
+      "answered": 169,
+      "abstained": 131
+    },
+    "path_counts": {
+      "reflex": 170,
+      "none": 130
+    },
+    "shape_counts": {
+      "unknown": 28,
+      "description": 190,
+      "numeric": 21,
+      "definition": 28,
+      "factoid": 16,
+      "list": 17
+    },
+    "lang_counts": {
+      "hi": 23,
+      "mr": 25,
+      "ta": 23,
+      "pa": 25,
+      "bn": 24,
+      "kn": 25,
+      "te": 24,
+      "ml": 24,
+      "gu": 23,
+      "en": 84
+    },
+    "answer_rate": 0.5633,
+    "mean_trust": 87.07,
+    "pipeline_histogram": [
+      {
+        "lo": 0,
+        "hi": 10,
+        "count": 31
+      },
+      {
+        "lo": 10,
+        "hi": 20,
+        "count": 262
+      },
+      {
+        "lo": 20,
+        "hi": 30,
+        "count": 7
+      },
+      {
+        "lo": 30,
+        "hi": 40,
+        "count": 0
+      },
+      {
+        "lo": 40,
+        "hi": 50,
+        "count": 0
+      },
+      {
+        "lo": 50,
+        "hi": 65,
+        "count": 0
+      },
+      {
+        "lo": 65,
+        "hi": 80,
+        "count": 0
+      },
+      {
+        "lo": 80,
+        "hi": 100,
+        "count": 0
+      },
+      {
+        "lo": 100,
+        "hi": 125,
+        "count": 0
+      },
+      {
+        "lo": 125,
+        "hi": 150,
+        "count": 0
+      },
+      {
+        "lo": 150,
+        "hi": 175,
+        "count": 0
+      },
+      {
+        "lo": 175,
+        "hi": 200,
+        "count": 0
+      },
+      {
+        "lo": 200,
+        "hi": 250,
+        "count": 0
+      },
+      {
+        "lo": 250,
+        "hi": 400,
+        "count": 0
+      },
+      {
+        "lo": 400,
+        "hi": null,
+        "count": 0
+      }
+    ]
+  },
+  "turns": [
+    {
+      "query": "एक ताज को फिर से बनाने की कीमत कितनी होती है",
+      "lang": "hi",
+      "shape": "description",
+      "pipeline_ms": 14.902,
+      "wall_ms": 15.063,
+      "status": "answered",
+      "trust": 88.05,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.019,
+        "fuse": 0.256,
+        "rerank.late-interaction": 0.287,
+        "retrieve.dense": 5.785,
+        "retrieve.sparse": 0.192,
+        "tool.answer_reflex": 0.165,
+        "tool.embed_query": 7.168,
+        "tool.guard": 0.23,
+        "tool.normalize_query": 0.076,
+        "tool.retrieve": 6.699,
+        "tool.route_query": 0.096
+      }
+    },
+    {
+      "query": "बैरल ओ स्लाइम क्या है?",
+      "lang": "hi",
+      "shape": "unknown",
+      "pipeline_ms": 14.52,
+      "wall_ms": 14.69,
+      "status": "answered",
+      "trust": 82.77,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.016,
+        "fuse": 0.245,
+        "rerank.late-interaction": 0.493,
+        "retrieve.dense": 5.68,
+        "retrieve.sparse": 0.166,
+        "tool.answer_reflex": 0.291,
+        "tool.embed_query": 6.564,
+        "tool.guard": 0.234,
+        "tool.normalize_query": 0.078,
+        "tool.retrieve": 6.759,
+        "tool.route_query": 0.086
+      }
+    },
+    {
+      "query": "बाज़ कितनी तेजी से यात्रा करता है",
+      "lang": "hi",
+      "shape": "description",
+      "pipeline_ms": 13.381,
+      "wall_ms": 13.553,
+      "status": "abstained",
+      "trust": 0.0,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.019,
+        "fuse": 0.264,
+        "rerank.late-interaction": 0.373,
+        "retrieve.dense": 5.728,
+        "retrieve.sparse": 0.194,
+        "tool.embed_query": 6.058,
+        "tool.guard": 0.079,
+        "tool.normalize_query": 0.084,
+        "tool.retrieve": 6.738,
+        "tool.route_query": 0.098
+      }
+    },
+    {
+      "query": "स्टबहब टोल फ्री नंबर",
+      "lang": "mr",
+      "shape": "unknown",
+      "pipeline_ms": 16.524,
+      "wall_ms": 16.695,
+      "status": "abstained",
+      "trust": 0.0,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.032,
+        "fuse": 1.542,
+        "rerank.late-interaction": 0.811,
+        "retrieve.dense": 6.534,
+        "retrieve.sparse": 0.222,
+        "tool.embed_query": 6.623,
+        "tool.guard": 0.088,
+        "tool.normalize_query": 0.068,
+        "tool.retrieve": 9.324,
+        "tool.route_query": 0.081
+      }
+    },
+    {
+      "query": "सौर शहर के पैनल कितना कि.डब्ल्यू उत्पादन करते हैं",
+      "lang": "hi",
+      "shape": "description",
+      "pipeline_ms": 18.295,
+      "wall_ms": 18.495,
+      "status": "abstained",
+      "trust": 0.0,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.02,
+        "fuse": 0.227,
+        "rerank.late-interaction": 0.453,
+        "retrieve.dense": 6.496,
+        "retrieve.sparse": 0.204,
+        "tool.embed_query": 9.929,
+        "tool.guard": 0.079,
+        "tool.normalize_query": 0.13,
+        "tool.retrieve": 7.561,
+        "tool.route_query": 0.171
+      }
+    },
+    {
+      "query": "पहली रक्षा नाक फ़िल्टर बिक्री संख्या",
+      "lang": "hi",
+      "shape": "description",
+      "pipeline_ms": 14.667,
+      "wall_ms": 14.889,
+      "status": "abstained",
+      "trust": 0.0,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.029,
+        "fuse": 0.402,
+        "rerank.late-interaction": 0.572,
+        "retrieve.dense": 6.036,
+        "retrieve.sparse": 0.298,
+        "tool.embed_query": 6.517,
+        "tool.guard": 0.101,
+        "tool.normalize_query": 0.086,
+        "tool.retrieve": 7.547,
+        "tool.route_query": 0.096
+      }
+    },
+    {
+      "query": "विंडोज 8 पर स्पष्ट डेस्कटॉप आइकन कैसे प्राप्त करें",
+      "lang": "hi",
+      "shape": "description",
+      "pipeline_ms": 21.067,
+      "wall_ms": 21.284,
+      "status": "answered",
+      "trust": 86.16,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.02,
+        "fuse": 0.225,
+        "rerank.late-interaction": 0.434,
+        "retrieve.dense": 7.187,
+        "retrieve.sparse": 0.332,
+        "tool.answer_reflex": 0.333,
+        "tool.embed_query": 11.098,
+        "tool.guard": 0.38,
+        "tool.normalize_query": 0.098,
+        "tool.retrieve": 8.369,
+        "tool.route_query": 0.121
+      }
+    },
+    {
+      "query": "क्या डेल्टा बैंगलोर के लिए उड़ान भरता है?",
+      "lang": "hi",
+      "shape": "description",
+      "pipeline_ms": 16.239,
+      "wall_ms": 16.443,
+      "status": "abstained",
+      "trust": 0.0,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.025,
+        "fuse": 0.345,
+        "rerank.late-interaction": 0.66,
+        "retrieve.dense": 5.794,
+        "retrieve.sparse": 0.221,
+        "tool.embed_query": 8.341,
+        "tool.guard": 0.097,
+        "tool.normalize_query": 0.089,
+        "tool.retrieve": 7.255,
+        "tool.route_query": 0.108
+      }
+    },
+    {
+      "query": "कैंटालूप को कितने समय तक परिपक्व होना है",
+      "lang": "hi",
+      "shape": "description",
+      "pipeline_ms": 15.611,
+      "wall_ms": 15.78,
+      "status": "abstained",
+      "trust": 0.0,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.023,
+        "fuse": 0.332,
+        "rerank.late-interaction": 0.741,
+        "retrieve.dense": 5.535,
+        "retrieve.sparse": 0.19,
+        "tool.embed_query": 8.06,
+        "tool.guard": 0.079,
+        "tool.normalize_query": 0.081,
+        "tool.retrieve": 6.983,
+        "tool.route_query": 0.092
+      }
+    },
+    {
+      "query": "ஒரு நிறுவனம் என்பது என்ன?",
+      "lang": "ta",
+      "shape": "unknown",
+      "pipeline_ms": 14.995,
+      "wall_ms": 15.161,
+      "status": "answered",
+      "trust": 88.5,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.022,
+        "fuse": 0.275,
+        "rerank.late-interaction": 0.513,
+        "retrieve.dense": 5.954,
+        "retrieve.sparse": 0.168,
+        "tool.answer_reflex": 0.404,
+        "tool.embed_query": 6.219,
+        "tool.guard": 0.599,
+        "tool.normalize_query": 0.068,
+        "tool.retrieve": 7.083,
+        "tool.route_query": 0.094
+      }
+    },
+    {
+      "query": "ஏன் ரேச்சல் கார்சன் ஒரு கடமையை நிறைவேற்ற வேண்டும் என்று எழுதினார்",
+      "lang": "ta",
+      "shape": "description",
+      "pipeline_ms": 16.48,
+      "wall_ms": 16.65,
+      "status": "abstained",
+      "trust": 0.0,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.021,
+        "fuse": 0.298,
+        "rerank.late-interaction": 0.321,
+        "retrieve.dense": 6.165,
+        "retrieve.sparse": 0.231,
+        "tool.embed_query": 8.67,
+        "tool.guard": 0.087,
+        "tool.normalize_query": 0.082,
+        "tool.retrieve": 7.202,
+        "tool.route_query": 0.105
+      }
+    },
+    {
+      "query": "பொட்டாசியம் குறைவுள்ள உணவுகளுக்கான வரைபடம்.",
+      "lang": "ta",
+      "shape": "description",
+      "pipeline_ms": 15.213,
+      "wall_ms": 15.374,
+      "status": "answered",
+      "trust": 91.21,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.019,
+        "fuse": 0.342,
+        "rerank.late-interaction": 0.252,
+        "retrieve.dense": 5.934,
+        "retrieve.sparse": 0.168,
+        "tool.answer_reflex": 0.215,
+        "tool.embed_query": 7.114,
+        "tool.guard": 0.335,
+        "tool.normalize_query": 0.087,
+        "tool.retrieve": 6.862,
+        "tool.route_query": 0.105
+      }
+    },
+    {
+      "query": "சரக்குக் கப்பலின் முன்பகுதி",
+      "lang": "ta",
+      "shape": "description",
+      "pipeline_ms": 16.508,
+      "wall_ms": 16.678,
+      "status": "answered",
+      "trust": 88.08,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.018,
+        "fuse": 0.25,
+        "rerank.late-interaction": 0.352,
+        "retrieve.dense": 6.739,
+        "retrieve.sparse": 0.162,
+        "tool.answer_reflex": 0.323,
+        "tool.embed_query": 7.297,
+        "tool.guard": 0.466,
+        "tool.normalize_query": 0.082,
+        "tool.retrieve": 7.678,
+        "tool.route_query": 0.106
+      }
+    },
+    {
+      "query": "நேர்மை அல்லது நேர்மையின் வரையறை",
+      "lang": "pa",
+      "shape": "description",
+      "pipeline_ms": 13.22,
+      "wall_ms": 13.372,
+      "status": "answered",
+      "trust": 78.99,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.017,
+        "fuse": 0.242,
+        "rerank.late-interaction": 0.243,
+        "retrieve.dense": 5.643,
+        "retrieve.sparse": 0.158,
+        "tool.answer_reflex": 0.158,
+        "tool.embed_query": 5.812,
+        "tool.guard": 0.169,
+        "tool.normalize_query": 0.072,
+        "tool.retrieve": 6.458,
+        "tool.route_query": 0.093
+      }
+    },
+    {
+      "query": "லிங்கனில் இப்போது பரோமெட்ரிக் அழுத்தம் என்ன?",
+      "lang": "ta",
+      "shape": "description",
+      "pipeline_ms": 16.228,
+      "wall_ms": 16.412,
+      "status": "answered",
+      "trust": 84.96,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.019,
+        "fuse": 0.265,
+        "rerank.late-interaction": 0.532,
+        "retrieve.dense": 6.087,
+        "retrieve.sparse": 0.189,
+        "tool.answer_reflex": 0.33,
+        "tool.embed_query": 7.335,
+        "tool.guard": 0.401,
+        "tool.normalize_query": 0.07,
+        "tool.retrieve": 7.329,
+        "tool.route_query": 0.098
+      }
+    },
+    {
+      "query": "ஸ்ட்ரதர்ஸ் நகரப் பள்ளி மாவட்டம் மாநில எண்",
+      "lang": "ta",
+      "shape": "description",
+      "pipeline_ms": 14.993,
+      "wall_ms": 15.163,
+      "status": "abstained",
+      "trust": 0.0,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.017,
+        "fuse": 0.352,
+        "rerank.late-interaction": 0.265,
+        "retrieve.dense": 6.387,
+        "retrieve.sparse": 0.17,
+        "tool.embed_query": 7.071,
+        "tool.guard": 0.08,
+        "tool.normalize_query": 0.081,
+        "tool.retrieve": 7.346,
+        "tool.route_query": 0.106
+      }
+    },
+    {
+      "query": "மருத்துவ மரிஜுவானா என்பது என்ன செய்ய உதவுகிறது?",
+      "lang": "ta",
+      "shape": "description",
+      "pipeline_ms": 16.108,
+      "wall_ms": 16.279,
+      "status": "answered",
+      "trust": 87.69,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.018,
+        "fuse": 0.253,
+        "rerank.late-interaction": 0.416,
+        "retrieve.dense": 5.624,
+        "retrieve.sparse": 0.218,
+        "tool.answer_reflex": 0.329,
+        "tool.embed_query": 7.659,
+        "tool.guard": 0.476,
+        "tool.normalize_query": 0.107,
+        "tool.retrieve": 6.76,
+        "tool.route_query": 0.166
+      }
+    },
+    {
+      "query": "ஃபிராங்க் கிஃபோர்டு எத்தனை பெண்களை திருமணம் செய்து கொண்டார்",
+      "lang": "ta",
+      "shape": "description",
+      "pipeline_ms": 15.526,
+      "wall_ms": 15.678,
+      "status": "answered",
+      "trust": 93.05,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.019,
+        "fuse": 0.27,
+        "rerank.late-interaction": 0.396,
+        "retrieve.dense": 5.682,
+        "retrieve.sparse": 0.205,
+        "tool.answer_reflex": 0.244,
+        "tool.embed_query": 7.328,
+        "tool.guard": 0.379,
+        "tool.normalize_query": 0.075,
+        "tool.retrieve": 6.764,
+        "tool.route_query": 0.121
+      }
+    },
+    {
+      "query": "ட்ரம்ப் நிர்வாகத்தின் எத்தனை விசாரணைகள் நடந்து கொண்டிருக்கின்றன",
+      "lang": "ta",
+      "shape": "description",
+      "pipeline_ms": 14.737,
+      "wall_ms": 14.903,
+      "status": "answered",
+      "trust": 82.71,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.019,
+        "fuse": 0.273,
+        "rerank.late-interaction": 0.3,
+        "retrieve.dense": 5.394,
+        "retrieve.sparse": 0.213,
+        "tool.answer_reflex": 0.211,
+        "tool.embed_query": 7.165,
+        "tool.guard": 0.246,
+        "tool.normalize_query": 0.086,
+        "tool.retrieve": 6.388,
+        "tool.route_query": 0.114
+      }
+    },
+    {
+      "query": "வாவ்-இல் பின்தொடர்பவர்களை எவ்வாறு சேகரிப்பது என்பதற்கான வழிகாட்டி",
+      "lang": "ta",
+      "shape": "description",
+      "pipeline_ms": 19.847,
+      "wall_ms": 20.01,
+      "status": "abstained",
+      "trust": 0.0,
+      "slo_met": true,
+      "degraded": false,
+      "stages": {
+        "diversify": 0.019,
+        "fuse": 0.338,
+        "rerank.late-interaction": 0.325,
+        "retrieve.dense": 6.228,
+        "retrieve.sparse": 0.2,
+        "tool.embed_query": 11.963,
+        "tool.guard": 0.081,
+        "tool.normalize_query": 0.072,
+        "tool.retrieve": 7.276,
+        "tool.route_query": 0.112
+      }
+    }
+  ]
+}

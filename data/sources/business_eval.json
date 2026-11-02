@@ -1,0 +1,13 @@
+{
+  "note": "Curated by the SETU maintainers from the sources in business.json. Not independently human-reviewed.",
+  "items": [
+    {"question": "What was Wipro's net income for the quarter ended September 30, 2026?", "relevant": ["wipro-q2-fy27"], "reference": "Net income for the quarter was Rs 32.0 billion, down 4.7% QoQ and 1.9% YoY."},
+    {"question": "How much did Tech Mahindra's EBIT grow in Q2 FY27?", "relevant": ["techm-q2-fy27"], "reference": "EBIT rose to Rs 2,387 crore, up 40.5% year on year."},
+    {"question": "What GDP growth does the World Bank project for India in FY27 in April 2026?", "relevant": ["wb-apr-2026", "wb-idu-apr-2026-summary"], "reference": "Growth is projected at 6.6 percent in FY27."},
+    {"question": "What was India's real GDP growth in Q1 of 2026-27 according to MoSPI?", "relevant": ["mospi-gdp-q1-fy27"], "reference": "Real GDP grew 7.8 percent in Q1 FY 2026-27."},
+    {"question": "What repo rate did the RBI set in its October 2025 policy?", "relevant": ["pib-rbi-policy-oct-2025"], "reference": "The repo rate was kept unchanged at 5.50 percent with a neutral stance."},
+    {"question": "How fast does India need to grow to reach high-income status by 2047?", "relevant": ["wb-high-income-2025"], "reference": "An average of 7.8 percent over the next 22 years."},
+    {"question": "What risks to India's outlook does the World Bank highlight in October 2026?", "relevant": ["wb-idu-oct-2026"], "reference": "Elevated external risks including oil prices, El Nino and stock market corrections causing capital flow volatility."},
+    {"question": "What was Wipro's operating margin for FY26?", "relevant": ["wipro-q4-fy26"], "reference": "FY26 margin was 17.2%."}
+  ]
+}

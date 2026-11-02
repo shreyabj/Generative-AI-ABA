@@ -1,0 +1,784 @@
+{
+  "queries": 72,
+  "mode": "reflex",
+  "recall": {
+    "@1": 0.1389,
+    "@3": 0.2778,
+    "@5": 0.3333,
+    "@10": 0.4306
+  },
+  "mrr@10": 0.218,
+  "answered": 41,
+  "abstain_correct": 21,
+  "abstain_wrong": 10,
+  "answer_token_recall_mean": 0.4509,
+  "by_language": {
+    "hi": {
+      "n": 8,
+      "recall@5": 0.5,
+      "answer_recall": 0.3315
+    },
+    "ta": {
+      "n": 8,
+      "recall@5": 0.375,
+      "answer_recall": 0.201
+    },
+    "bn": {
+      "n": 8,
+      "recall@5": 0.375,
+      "answer_recall": 0.2135
+    },
+    "kn": {
+      "n": 8,
+      "recall@5": 0.25,
+      "answer_recall": 0.0717
+    },
+    "te": {
+      "n": 8,
+      "recall@5": 0.0,
+      "answer_recall": 0.2054
+    },
+    "ml": {
+      "n": 8,
+      "recall@5": 0.375,
+      "answer_recall": 0.3238
+    },
+    "mr": {
+      "n": 8,
+      "recall@5": 0.5,
+      "answer_recall": 0.41
+    },
+    "gu": {
+      "n": 8,
+      "recall@5": 0.5,
+      "answer_recall": 0.4717
+    },
+    "pa": {
+      "n": 8,
+      "recall@5": 0.125,
+      "answer_recall": 0.0823
+    }
+  },
+  "rows": [
+    {
+      "query": "कॉर्पोरेशन क्या है?",
+      "lang": "hi",
+      "type": "DESCRIPTION",
+      "gold_rank": 4,
+      "status": "answered",
+      "trust": 90.21,
+      "answer_recall": 0.889,
+      "pipeline_ms": 15.311
+    },
+    {
+      "query": "रेचल कार्सन ने क्यों एक दायित्व बर्दाश्त करने के लिए लिखा",
+      "lang": "hi",
+      "type": "DESCRIPTION",
+      "gold_rank": 8,
+      "status": "answered",
+      "trust": 84.13,
+      "answer_recall": 0.263,
+      "pipeline_ms": 17.164
+    },
+    {
+      "query": "ईमानदारी या सच्चाई की परिभाषा",
+      "lang": "hi",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 91.49,
+      "answer_recall": 0.5,
+      "pipeline_ms": 14.321
+    },
+    {
+      "query": "फ्रैंक गिफोर्ड ने कितनी महिलाओं से शादी की",
+      "lang": "hi",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 81.62,
+      "answer_recall": 1.0,
+      "pipeline_ms": 15.758
+    },
+    {
+      "query": "बाज़ कितनी तेजी से यात्रा करता है",
+      "lang": "hi",
+      "type": "NUMERIC",
+      "gold_rank": 3,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 13.824
+    },
+    {
+      "query": "स्टबहब टोल फ्री नंबर",
+      "lang": "hi",
+      "type": "NUMERIC",
+      "gold_rank": 1,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 14.177
+    },
+    {
+      "query": "क्या डेल्टा बैंगलोर के लिए उड़ान भरता है?",
+      "lang": "hi",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 16.15
+    },
+    {
+      "query": "कैंटालूप को कितने समय तक परिपक्व होना है",
+      "lang": "hi",
+      "type": "NUMERIC",
+      "gold_rank": 3,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 15.242
+    },
+    {
+      "query": "ஒரு நிறுவனம் என்பது என்ன?",
+      "lang": "ta",
+      "type": "DESCRIPTION",
+      "gold_rank": 3,
+      "status": "answered",
+      "trust": 88.5,
+      "answer_recall": 0.941,
+      "pipeline_ms": 14.467
+    },
+    {
+      "query": "ஏன் ரேச்சல் கார்சன் ஒரு கடமையை நிறைவேற்ற வேண்டும் என்று எழுதினார்",
+      "lang": "ta",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 15.953
+    },
+    {
+      "query": "நேர்மை அல்லது நேர்மையின் வரையறை",
+      "lang": "ta",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 78.99,
+      "answer_recall": 0.0,
+      "pipeline_ms": 14.425
+    },
+    {
+      "query": "ஃபிராங்க் கிஃபோர்டு எத்தனை பெண்களை திருமணம் செய்து கொண்டார்",
+      "lang": "ta",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 93.05,
+      "answer_recall": 0.667,
+      "pipeline_ms": 15.957
+    },
+    {
+      "query": "கழுகு எவ்வளவு வேகமாக பயணிக்கிறது?",
+      "lang": "ta",
+      "type": "NUMERIC",
+      "gold_rank": 2,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 14.362
+    },
+    {
+      "query": "ஸ்டப்ஹப் டோல் இலவச எண்",
+      "lang": "ta",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 14.488
+    },
+    {
+      "query": "டெல்டா பெங்களூருக்கு செல்கிறதா?",
+      "lang": "ta",
+      "type": "DESCRIPTION",
+      "gold_rank": 3,
+      "status": "answered",
+      "trust": 88.75,
+      "answer_recall": 0.0,
+      "pipeline_ms": 15.994
+    },
+    {
+      "query": "கருவைக்கூடைகள் முதிர்ச்சியடைய எவ்வளவு காலம் ஆகும்",
+      "lang": "ta",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 15.616
+    },
+    {
+      "query": "কর্পোরেশন কী?",
+      "lang": "bn",
+      "type": "DESCRIPTION",
+      "gold_rank": 4,
+      "status": "answered",
+      "trust": 89.23,
+      "answer_recall": 0.375,
+      "pipeline_ms": 15.363
+    },
+    {
+      "query": "র‍্যাচেল কারসন কেন একটি বাধ্যবাধকতা সহ্য করার জন্য লিখেছিলেন",
+      "lang": "bn",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 87.24,
+      "answer_recall": 0.25,
+      "pipeline_ms": 20.235
+    },
+    {
+      "query": "সততা বা সততার সংজ্ঞা",
+      "lang": "bn",
+      "type": "DESCRIPTION",
+      "gold_rank": 1,
+      "status": "answered",
+      "trust": 88.81,
+      "answer_recall": 0.75,
+      "pipeline_ms": 16.664
+    },
+    {
+      "query": "ফ্র্যাঙ্ক গিফোর্ড কতজন মহিলাকে বিয়ে করেছিলেন",
+      "lang": "bn",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 84.33,
+      "answer_recall": 0.333,
+      "pipeline_ms": 18.562
+    },
+    {
+      "query": "একটি ঈগল কত দ্রুত ভ্রমণ করে।",
+      "lang": "bn",
+      "type": "NUMERIC",
+      "gold_rank": 9,
+      "status": "answered",
+      "trust": 90.95,
+      "answer_recall": 0.0,
+      "pipeline_ms": 16.226
+    },
+    {
+      "query": "স্টাবহাব টোল ফ্রি নম্বর",
+      "lang": "bn",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 14.072
+    },
+    {
+      "query": "ডুবলুমধ্য বাঁক বাঁগালোরে উড়ে যায়",
+      "lang": "bn",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 16.199
+    },
+    {
+      "query": "কতদিন করে ক্যান্টালুপ পাকাবে।",
+      "lang": "bn",
+      "type": "NUMERIC",
+      "gold_rank": 5,
+      "status": "answered",
+      "trust": 90.86,
+      "answer_recall": 0.0,
+      "pipeline_ms": 16.595
+    },
+    {
+      "query": ". ಕಾರ್ಪೊರೇಷನ್ ಎಂದರೇನು?",
+      "lang": "kn",
+      "type": "DESCRIPTION",
+      "gold_rank": 2,
+      "status": "answered",
+      "trust": 82.31,
+      "answer_recall": 0.0,
+      "pipeline_ms": 16.422
+    },
+    {
+      "query": "ರಾಚೆಲ್ ಕಾರ್ಸನ್ ಅವರು ಸಹಿಸಿಕೊಳ್ಳಬೇಕಾದ ಒಂದು ಬಾಧ್ಯತೆಯನ್ನು ಏಕೆ ಬರೆದರು?",
+      "lang": "kn",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 89.77,
+      "answer_recall": 0.174,
+      "pipeline_ms": 18.337
+    },
+    {
+      "query": "ಪ್ರಾಮಾಣಿಕತೆ ಅಥವಾ ಸಮಗ್ರತೆಯ ವ್ಯಾಖ್ಯಾನ",
+      "lang": "kn",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 16.207
+    },
+    {
+      "query": "ಫ್ರಾಂಕ್ ಗಿಫೋರ್ಡ್ ಎಷ್ಟು ಮಹಿಳೆಯರನ್ನು ಮದುವೆಯಾಗಿದ್ದಾರೆ",
+      "lang": "kn",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 82.91,
+      "answer_recall": 0.4,
+      "pipeline_ms": 16.622
+    },
+    {
+      "query": "ಹದ್ದು ಎಷ್ಟು ವೇಗವಾಗಿ ಪ್ರಯಾಣಿಸುತ್ತದೆ",
+      "lang": "kn",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 83.55,
+      "answer_recall": 0.0,
+      "pipeline_ms": 15.552
+    },
+    {
+      "query": "ಸ್ಟಬ್‌ಹಬ್ ಟೋಲ್ ಉಚಿತ ಸಂಖ್ಯೆ",
+      "lang": "kn",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 14.831
+    },
+    {
+      "query": "ಡೆಲ್ಟಾ ಬೆಂಗಳೂರಿಗೆ ಹೋಗುತ್ತದೆಯೇ?",
+      "lang": "kn",
+      "type": "DESCRIPTION",
+      "gold_rank": 2,
+      "status": "answered",
+      "trust": 89.23,
+      "answer_recall": 0.0,
+      "pipeline_ms": 17.273
+    },
+    {
+      "query": "ಕ್ಯಾಂಟಲೂಪ್ ಮಾಗಲು ಎಷ್ಟು ಸಮಯ ತೆಗೆದುಕೊಳ್ಳುತ್ತದೆ",
+      "lang": "kn",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 17.247
+    },
+    {
+      "query": "కార్పొరేషన్ అంటే ఏమిటి?",
+      "lang": "te",
+      "type": "DESCRIPTION",
+      "gold_rank": 8,
+      "status": "answered",
+      "trust": 86.56,
+      "answer_recall": 0.5,
+      "pipeline_ms": 17.13
+    },
+    {
+      "query": "రాచెల్ కార్సన్ ఎందుకు సహించాల్సిన బాధ్యతను వ్రాశారు",
+      "lang": "te",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 17.924
+    },
+    {
+      "query": "నిజాయితీ లేదా సమగ్రత నిర్వచనం",
+      "lang": "te",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 87.13,
+      "answer_recall": 0.571,
+      "pipeline_ms": 16.425
+    },
+    {
+      "query": "ఫ్రాంక్ గిఫోర్డ్ ఎంత మంది మహిళలను వివాహం చేసుకున్నాడు",
+      "lang": "te",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 83.63,
+      "answer_recall": 0.0,
+      "pipeline_ms": 17.672
+    },
+    {
+      "query": "గద్దలు ఎంత వేగంగా ప్రయాణిస్తాయో",
+      "lang": "te",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 17.235
+    },
+    {
+      "query": "స్టబ్‌హబ్ టోల్ ఉచిత నంబర్",
+      "lang": "te",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 90.56,
+      "answer_recall": 0.571,
+      "pipeline_ms": 17.822
+    },
+    {
+      "query": "డెల్టా బెంగళూరుకు ఎలా చేరుకుంటుంది",
+      "lang": "te",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 87.58,
+      "answer_recall": 0.0,
+      "pipeline_ms": 15.57
+    },
+    {
+      "query": "కంటాలూప్ పండుకు ఎంత సమయం పడుతుంది",
+      "lang": "te",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 14.86
+    },
+    {
+      "query": "ഒരു കോർപ്പറേഷൻ എന്താണ്?",
+      "lang": "ml",
+      "type": "DESCRIPTION",
+      "gold_rank": 5,
+      "status": "answered",
+      "trust": 93.91,
+      "answer_recall": 0.333,
+      "pipeline_ms": 15.153
+    },
+    {
+      "query": "റേച്ചൽ കാർസൺ എന്തുകൊണ്ട് സഹിക്കാനുള്ള ഒരു ബാധ്യത എഴുതിയത്?",
+      "lang": "ml",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 17.873
+    },
+    {
+      "query": "സത്യസന്ധതയോ സത്യസന്ധതയുടെ നിർവചനമോ",
+      "lang": "ml",
+      "type": "DESCRIPTION",
+      "gold_rank": 3,
+      "status": "answered",
+      "trust": 88.53,
+      "answer_recall": 0.357,
+      "pipeline_ms": 17.183
+    },
+    {
+      "query": "ഫ്രാങ്ക് ഗിഫോർഡ് എത്ര സ്ത്രീകളെ വിവാഹം കഴിച്ചു",
+      "lang": "ml",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 88.65,
+      "answer_recall": 1.0,
+      "pipeline_ms": 16.768
+    },
+    {
+      "query": "ഒരു കഴുകൻ എത്ര വേഗത്തിൽ സഞ്ചരിക്കുന്നു?",
+      "lang": "ml",
+      "type": "NUMERIC",
+      "gold_rank": 3,
+      "status": "answered",
+      "trust": 91.62,
+      "answer_recall": 0.4,
+      "pipeline_ms": 17.031
+    },
+    {
+      "query": "സ്റ്റബ്ഹബ് ടോൾ ഫ്രീ നമ്പർ",
+      "lang": "ml",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 98.55,
+      "answer_recall": 0.5,
+      "pipeline_ms": 15.382
+    },
+    {
+      "query": "ഡെൽറ്റ ബാംഗ്ലൂരിലേക്ക് പറക്കുന്നുണ്ടോ?",
+      "lang": "ml",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 22.623
+    },
+    {
+      "query": "കാന്റലൂപ്പ് പഴുത്തുവരാൻ എത്ര സമയമെടുക്കും",
+      "lang": "ml",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 17.473
+    },
+    {
+      "query": "कॉर्पोरेशन म्हणजे काय?",
+      "lang": "mr",
+      "type": "DESCRIPTION",
+      "gold_rank": 1,
+      "status": "answered",
+      "trust": 88.31,
+      "answer_recall": 1.0,
+      "pipeline_ms": 17.358
+    },
+    {
+      "query": "रॅचेल कार्सनला काय करावे लागले असे लिहिले गेले का?",
+      "lang": "mr",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 81.96,
+      "answer_recall": 0.28,
+      "pipeline_ms": 16.144
+    },
+    {
+      "query": "प्रामाणिकपणा किंवा सचोटीची व्याख्या",
+      "lang": "mr",
+      "type": "DESCRIPTION",
+      "gold_rank": 1,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 14.131
+    },
+    {
+      "query": "फ्रँक गिफर्डने किती स्त्रियांशी लग्न केले",
+      "lang": "mr",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 85.18,
+      "answer_recall": 1.0,
+      "pipeline_ms": 16.074
+    },
+    {
+      "query": "गरुड किती वेगाने प्रवास करतो",
+      "lang": "mr",
+      "type": "NUMERIC",
+      "gold_rank": 1,
+      "status": "answered",
+      "trust": 84.18,
+      "answer_recall": 1.0,
+      "pipeline_ms": 14.899
+    },
+    {
+      "query": "स्टबहब टोल फ्री नंबर",
+      "lang": "mr",
+      "type": "NUMERIC",
+      "gold_rank": 8,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 7.719
+    },
+    {
+      "query": "ते डेल्टा बंगलोरला जाते का?",
+      "lang": "mr",
+      "type": "DESCRIPTION",
+      "gold_rank": 1,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 15.666
+    },
+    {
+      "query": "कॅन्टालूप किती काळ परिपक्व होईल",
+      "lang": "mr",
+      "type": "NUMERIC",
+      "gold_rank": 7,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 15.456
+    },
+    {
+      "query": ". શું એક કોર્પોરેશન છે?",
+      "lang": "gu",
+      "type": "DESCRIPTION",
+      "gold_rank": 1,
+      "status": "answered",
+      "trust": 88.71,
+      "answer_recall": 0.857,
+      "pipeline_ms": 17.371
+    },
+    {
+      "query": "રશેલ કાર્સને શા માટે સહન કરવાની જવાબદારી લખી?",
+      "lang": "gu",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 16.124
+    },
+    {
+      "query": "પ્રામાણિકતા અથવા સત્યનિષ્ઠાની વ્યાખ્યા",
+      "lang": "gu",
+      "type": "DESCRIPTION",
+      "gold_rank": 1,
+      "status": "answered",
+      "trust": 95.35,
+      "answer_recall": 0.75,
+      "pipeline_ms": 17.379
+    },
+    {
+      "query": "ફ્રેન્ક ગિફોર્ડે કેટલી સ્ત્રીઓ સાથે લગ્ન કર્યા હતા",
+      "lang": "gu",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 87.32,
+      "answer_recall": 0.667,
+      "pipeline_ms": 17.041
+    },
+    {
+      "query": "ગરુડ કેટલી ઝડપથી મુસાફરી કરે છે",
+      "lang": "gu",
+      "type": "NUMERIC",
+      "gold_rank": 1,
+      "status": "answered",
+      "trust": 87.57,
+      "answer_recall": 1.0,
+      "pipeline_ms": 17.144
+    },
+    {
+      "query": "સ્ટબહબ ટોલ ફ્રી નંબર",
+      "lang": "gu",
+      "type": "NUMERIC",
+      "gold_rank": 6,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 15.472
+    },
+    {
+      "query": "શું ડેલ્ટા બેંગ્લોર તરફ ઉડે છે?",
+      "lang": "gu",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 16.077
+    },
+    {
+      "query": "કેન્ટાલૂપ પાકવા માટે કેટલો સમય લાગે છે",
+      "lang": "gu",
+      "type": "NUMERIC",
+      "gold_rank": 1,
+      "status": "answered",
+      "trust": 82.63,
+      "answer_recall": 0.5,
+      "pipeline_ms": 16.814
+    },
+    {
+      "query": ". ਕੋਰਪੋਰੇਸ਼ਨ ਕੀ ਹੈ?",
+      "lang": "pa",
+      "type": "DESCRIPTION",
+      "gold_rank": 6,
+      "status": "answered",
+      "trust": 89.39,
+      "answer_recall": 0.214,
+      "pipeline_ms": 15.439
+    },
+    {
+      "query": "ਰੇਚਲ ਕਾਰਸਨ ਨੇ ਇੱਕ ਜ਼ਿੰਮੇਵਾਰੀ ਕਿਉਂ ਲਿਖੀ ਸੀ।",
+      "lang": "pa",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 15.945
+    },
+    {
+      "query": "ਇਮਾਨਦਾਰੀ ਜਾਂ ਇਮਾਨਦਾਰੀ ਦੀ ਪਰਿਭਾਸ਼ਾ",
+      "lang": "pa",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 91.98,
+      "answer_recall": 0.444,
+      "pipeline_ms": 16.805
+    },
+    {
+      "query": "ਫਰੈਂਕ ਗਿਫੋਰਡ ਨੇ ਕਿੰਨੀਆਂ ਔਰਤਾਂ ਨਾਲ ਵਿਆਹ ਕੀਤਾ",
+      "lang": "pa",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 17.223
+    },
+    {
+      "query": "ਇੱਕ ਬਾਜ਼ ਕਿੰਨੀ ਤੇਜ਼ੀ ਨਾਲ ਯਾਤਰਾ ਕਰਦਾ ਹੈ",
+      "lang": "pa",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 17.101
+    },
+    {
+      "query": "ਸਟਬਹੱਬ ਟੋਲ ਮੁਫ਼ਤ ਨੰਬਰ",
+      "lang": "pa",
+      "type": "NUMERIC",
+      "gold_rank": 3,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 15.152
+    },
+    {
+      "query": "ਡੈਲਟਾ ਬੰਗਲੌਰ ਲਈ ਉਡਾਣ ਭਰਦਾ ਹੈ",
+      "lang": "pa",
+      "type": "DESCRIPTION",
+      "gold_rank": null,
+      "status": "abstained",
+      "trust": 0.0,
+      "answer_recall": 0.0,
+      "pipeline_ms": 16.487
+    },
+    {
+      "query": "ਕੈਂਟਾਲੂਪ ਨੂੰ ਪੱਕਣ ਲਈ ਕਿੰਨਾ ਸਮਾਂ ਲੱਗੇਗਾ",
+      "lang": "pa",
+      "type": "NUMERIC",
+      "gold_rank": null,
+      "status": "answered",
+      "trust": 89.1,
+      "answer_recall": 0.0,
+      "pipeline_ms": 18.411
+    }
+  ]
+}
