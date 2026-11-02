@@ -1,0 +1,162 @@
+/* ===========================================================================
+   SETU design tokens — dual theme
+   ---------------------------------------------------------------------------
+   Light is the default: this is a consumer-facing question box, and a warm
+   paper-white page reads as calm and trustworthy where a black instrument
+   panel reads as "developer tool". Dark is one click away and remembered.
+
+   Both themes define the same variable names, so no component knows which
+   theme it is in. Accent colours are re-tuned per theme rather than reused,
+   because a colour with good contrast on near-black usually has poor
+   contrast on white (acid lime being the obvious offender).
+   =========================================================================== */
+
+:root {
+  /* ---- shape & motion (theme-independent) ---------------------------- */
+  --r-xs: 5px;
+  --r-sm: 9px;
+  --r-md: 13px;
+  --r-lg: 18px;
+  --r-xl: 26px;
+  --r-pill: 999px;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 22px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+
+  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  --font-indic: "Noto Sans Devanagari", "Nirmala UI", "Noto Sans", var(--font-ui);
+
+  --ease: cubic-bezier(0.22, 0.68, 0.24, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 130ms;
+  --t-mid: 260ms;
+  --t-slow: 520ms;
+}
+
+/* =========================================================================== */
+/* LIGHT  (default)                                                            */
+/* =========================================================================== */
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f6f5f2;
+  --bg-lift: #fffefc;
+  --bg-deep: #eeece7;
+  --surface: #ffffff;
+  --panel: #ffffff;
+  --panel-hi: #fbfaf8;
+  --hair: rgba(24, 26, 32, 0.09);
+  --hair-hi: rgba(24, 26, 32, 0.17);
+
+  --ink: #14161c;
+  --ink-2: #4a5060;
+  --ink-3: #767d90;
+  --ink-4: #a4aab8;
+
+  /* accents, contrast-checked against --surface */
+  --accent: #5744e6; /* primary — violet */
+  --accent-soft: rgba(87, 68, 230, 0.09);
+  --accent-line: rgba(87, 68, 230, 0.28);
+
+  --lime: #1f7a3d; /* success / within budget */
+  --lime-dim: rgba(31, 122, 61, 0.1);
+  --violet: #5744e6;
+  --violet-dim: rgba(87, 68, 230, 0.1);
+  --cyan: #0e7490;
+  --cyan-dim: rgba(14, 116, 144, 0.1);
+  --amber: #a35b04;
+  --amber-dim: rgba(163, 91, 4, 0.11);
+  --coral: #c0362c;
+  --coral-dim: rgba(192, 54, 44, 0.09);
+  --rose: #b02a63;
+
+  --layer-atomic: #1f7a3d;
+  --layer-semantic: #0e7490;
+  --layer-window: #5744e6;
+  --layer-document: #a35b04;
+
+  --shadow-sm: 0 1px 2px rgba(24, 26, 32, 0.06);
+  --shadow-md: 0 4px 16px -4px rgba(24, 26, 32, 0.12), 0 1px 3px rgba(24, 26, 32, 0.05);
+  --shadow-lg: 0 24px 60px -18px rgba(24, 26, 32, 0.22), 0 2px 8px rgba(24, 26, 32, 0.06);
+  --glow: 0 0 0 4px rgba(87, 68, 230, 0.13);
+
+  --grain-opacity: 0.02;
+  --grid-line: rgba(24, 26, 32, 0.032);
+  --halo-1: rgba(87, 68, 230, 0.1);
+  --halo-2: rgba(14, 116, 144, 0.08);
+}
+
+/* =========================================================================== */
+/* DARK                                                                        */
+/* =========================================================================== */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #08090d;
+  --bg-lift: #10121a;
+  --bg-deep: #040507;
+  --surface: #12141c;
+  --panel: rgba(255, 255, 255, 0.032);
+  --panel-hi: rgba(255, 255, 255, 0.06);
+  --hair: rgba(255, 255, 255, 0.09);
+  --hair-hi: rgba(255, 255, 255, 0.17);
+
+  --ink: #eceef4;
+  --ink-2: #a2aabb;
+  --ink-3: #6d7484;
+  --ink-4: #464c5b;
+
+  --accent: #9d8dff;
+  --accent-soft: rgba(157, 141, 255, 0.14);
+  --accent-line: rgba(157, 141, 255, 0.34);
+
+  --lime: #c6f24e;
+  --lime-dim: rgba(198, 242, 78, 0.14);
+  --violet: #9d8dff;
+  --violet-dim: rgba(157, 141, 255, 0.15);
+  --cyan: #4ce0d2;
+  --cyan-dim: rgba(76, 224, 210, 0.14);
+  --amber: #ffb347;
+  --amber-dim: rgba(255, 179, 71, 0.14);
+  --coral: #ff7a70;
+  --coral-dim: rgba(255, 122, 112, 0.14);
+  --rose: #ff5c8a;
+
+  --layer-atomic: #c6f24e;
+  --layer-semantic: #4ce0d2;
+  --layer-window: #9d8dff;
+  --layer-document: #ffb347;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 26px -8px rgba(0, 0, 0, 0.8);
+  --shadow-lg: 0 26px 70px -24px rgba(0, 0, 0, 0.9);
+  --glow: 0 0 0 4px rgba(157, 141, 255, 0.18);
+
+  --grain-opacity: 0.03;
+  --grid-line: rgba(255, 255, 255, 0.028);
+  --halo-1: rgba(157, 141, 255, 0.16);
+  --halo-2: rgba(76, 224, 210, 0.09);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-fast: 1ms;
+    --t-mid: 1ms;
+    --t-slow: 1ms;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
